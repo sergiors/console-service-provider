@@ -7,7 +7,7 @@ Install
 -------
 ```bash
 composer require inbep/console-service-provider
-``
+```
 
 How to use
 ----------
@@ -16,6 +16,7 @@ use Silex\Application;
 use Inbep\Silex\Provider\ConsoleServiceProvider;
 
 $app = new Application();
+$app->register(new ConsoleServiceProvider());
 $app->boot();
 $app['console']->run();
 ```
