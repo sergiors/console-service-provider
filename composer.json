@@ -1,5 +1,5 @@
 {
-  "name": "inbep/console-service-provider",
+  "name": "sergiors/console-service-provider",
   "description": "Console for Silex",
   "license": "MIT",
   "authors": [
@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Inbep\\Silex\\": "src"
+      "Sergiors\\Silex\\": "src"
     }
   },
   "require": {
