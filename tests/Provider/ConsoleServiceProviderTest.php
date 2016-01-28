@@ -1,9 +1,11 @@
 <?php
-namespace Sergiors\Silex\Provider;
+
+namespace Sergiors\Silex\Tests\Provider;
 
 use Silex\Application;
 use Silex\WebTestCase;
 use Symfony\Component\Console\Application as ConsoleApplication;
+use Sergiors\Silex\Provider\ConsoleServiceProvider;
 
 class ConsoleServiceProviderTest extends WebTestCase
 {
@@ -22,6 +24,7 @@ class ConsoleServiceProviderTest extends WebTestCase
         $app = new Application();
         $app['debug'] = true;
         $app['exception_handler']->disable();
+
         return $app;
     }
 }
