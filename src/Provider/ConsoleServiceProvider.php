@@ -2,20 +2,16 @@
 
 namespace Sergiors\Silex\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Symfony\Component\Console\Application as ConsoleApplication;
 
 class ConsoleServiceProvider implements ServiceProviderInterface
 {
-    public function register(Application $app)
+    public function register(Container $app)
     {
-        $app['console'] = $app->share(function () {
+        $app['console'] = function () {
             return new ConsoleApplication();
-        });
-    }
-
-    public function boot(Application $app)
-    {
+        };
     }
 }
