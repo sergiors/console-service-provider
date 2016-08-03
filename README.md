@@ -16,7 +16,10 @@ use Silex\Application;
 use Sergiors\Silex\Provider\ConsoleServiceProvider;
 
 $app = new Application();
-$app->register(new ConsoleServiceProvider());
+$app->register(new ConsoleServiceProvider(), [
+    'console.name' => '{Your Application Name}',
+    'console.version' => '1.0.0-dev'
+]);
 $app->boot();
 $app['console']->run();
 ```
