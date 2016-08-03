@@ -10,8 +10,11 @@ class ConsoleServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['console'] = function () {
-            return new ConsoleApplication();
+        $app['console'] = function (Container $app) {
+            return new ConsoleApplication($app['console.name'], $app['console.version']);
         };
+
+        $app['console.name'] = 'UNKNOWN';
+        $app['console.version'] = 'UNKNOWN';
     }
 }
