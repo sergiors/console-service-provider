@@ -1,6 +1,6 @@
 {
     "name": "sergiors/console-service-provider",
-    "description": "Console for Silex",
+    "description": "Console for Pimple",
     "license": "MIT",
     "authors": [
         {
